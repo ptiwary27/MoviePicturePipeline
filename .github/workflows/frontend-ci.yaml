@@ -31,11 +31,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-
 
-      - name: Install dependencies for linting
-        run: cd frontend && npm ci
+      #Install dependencies for linting
+        - run: cd frontend && npm ci
 
-      - name: Run linting
-        run: cd frontend && npm run lint
+      #: Run linting
+        - run: cd frontend && npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -57,11 +57,11 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-
 
-      - name: Install dependencies for testing
-        run: cd frontend && npm ci
+      # Install dependencies for testing
+        - run: cd frontend && npm ci
 
-      - name: Run tests
-        run: cd frontend && npm run test
+      # Run tests
+        - run: cd frontend && npm run test
 
   build:
     runs-on: ubuntu-latest
@@ -84,5 +84,5 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-npm-
 
-      - name: Install dependencies for building
-        run: cd frontend && npm ci
+      # Install dependencies for building
+        - run: cd frontend && npm ci

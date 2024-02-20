@@ -32,7 +32,7 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: Install dependencies for linting
-        run: cd frontend ** npm ci
+        run: cd frontend && npm ci
 
       - name: Run linting
         run: cd frontend && npm run lint

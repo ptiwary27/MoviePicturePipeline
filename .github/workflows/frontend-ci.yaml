@@ -32,10 +32,10 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: Install dependencies for linting
-        run: cd frontend && npm install
+        run: npm install
 
       - name: Run linting
-        run: cd frontend && npm run lint
+        run: npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -58,10 +58,10 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: Install dependencies for testing
-        run: cd frontend && npm install
+        run: npm install
 
       - name: Run tests
-        run: cd frontend && npm run test
+        run: npm run test
 
   build:
     runs-on: ubuntu-latest
@@ -85,8 +85,4 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: Install dependencies for building
-        run: cd frontend && npm install
-
-      - name: Build application using Docker
-        run: |
-          docker build -t my-application .
+        run: npm install

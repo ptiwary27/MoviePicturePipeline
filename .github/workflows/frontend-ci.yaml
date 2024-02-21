@@ -35,7 +35,7 @@ jobs:
       - name: Install dependencies for linting
         run: |
               cd frontend
-              npm ci
+              npm install
 
       - name: Run linting
         run: |
@@ -65,7 +65,7 @@ jobs:
       - name: Install dependencies for testing
         run: |
               cd frontend 
-              npm ci
+              npm install
 
       - name: Run tests
         run: |
@@ -96,4 +96,4 @@ jobs:
       - name: Install dependencies for building
         run: |
               cd frontend
-              npm ci
+              npm install

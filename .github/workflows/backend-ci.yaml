@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-
   pull_request:
     branches:
       - master
@@ -33,14 +32,10 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: Install dependencies for linting
-        run: |
-              cd frontend
-              npm ci
+        run: cd backend && npm ci
 
       - name: Run linting
-        run: |
-              cd frontend
-              npm run lint
+        run: cd backend && npm run lint
 
   test:
     runs-on: ubuntu-latest
@@ -63,14 +58,10 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: Install dependencies for testing
-        run: |
-              cd frontend 
-              npm ci
+        run: cd backend && npm ci
 
       - name: Run tests
-        run: |
-              cd frontend
-              npm run test
+        run: cd backend && npm run test
 
   build:
     runs-on: ubuntu-latest
@@ -94,6 +85,4 @@ jobs:
             ${{ runner.os }}-npm-
 
       - name: Install dependencies for building
-        run: |
-              cd frontend
-              npm ci
+        run: cd backend && npm ci
